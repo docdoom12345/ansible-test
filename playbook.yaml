@@ -1,0 +1,11 @@
+- name: testing a playbook
+  hosts: centos
+  gather_facts: no
+  tasks:
+    - name: create a file
+      file: 
+        path: /home/student/test.txt
+        state: touch
+        owner: student
+        group: student
+        mode: '0644'
